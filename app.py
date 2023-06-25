@@ -90,5 +90,5 @@ def send_reply(phone_number_id, whatsapp_token, to, reply_message):
     response = conn.getresponse()
     conn.close()
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0')
