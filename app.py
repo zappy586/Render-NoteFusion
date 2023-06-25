@@ -6,9 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def webhook():
-    VERIFY_TOKEN = "yolo-bro"
-    WHATSAPP_TOKEN = "EAADVcpE3deABAHLoWnb0wjeIQREFE2FJMuZBybPjB7o6OakuhfGEx56Bb64rpfxg2FVlTfF06fd9nMVSinpRwCkQzqG4sNE5vfMt0qmljPCDoCvXBzZCrTzIAsdhcbsoXhyZBahD4XzhHguldiiEWun6QwsvSZA3DSPm6CyOW7pKVJT0rZCZCWwjufuPvjVQDGa0U2CCZBUmjWybS0aJXaR"
-
+   VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
+    WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN")
     response = None
     if request.method == 'GET':
         queryParams = request.args
